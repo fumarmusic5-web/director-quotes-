@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Director's Cut</title>
+<title>Director Quote</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -21,193 +21,140 @@ html,body{
 
 .widget{
   width:100%;
-  height:430px;
-  overflow:hidden;
+  height:360px;
+  background:
+    linear-gradient(rgba(0,0,0,.86),rgba(0,0,0,.86)),
+    url("take5.png") center/cover no-repeat;
   border:1px solid rgba(214,165,67,.35);
   border-radius:18px;
-  background:
-    linear-gradient(rgba(0,0,0,.84),rgba(0,0,0,.84)),
-    url("take5.png") center/cover no-repeat;
   display:grid;
   grid-template-columns:1.35fr .75fr;
+  overflow:hidden;
 }
 
-.main{
-  padding:24px;
-  border-right:1px solid rgba(214,165,67,.25);
+.left{
+  padding:28px 34px;
+  border-right:1px solid rgba(214,165,67,.35);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-.icon{
-  font-size:28px;
+.label{
   color:#d7aa45;
-}
-
-h1{
   font-family:Oswald;
-  color:#d7aa45;
   letter-spacing:5px;
-  font-size:26px;
-}
-
-.sub{
-  color:#d7aa45;
-  letter-spacing:4px;
-  font-size:11px;
-}
-
-.line{
-  height:1px;
-  background:rgba(214,165,67,.4);
-  margin:14px 0 18px;
+  font-size:15px;
+  margin-bottom:22px;
+  text-align:center;
 }
 
 .quote{
-  font-family:"Playfair Display",serif;
-  font-size:26px;
-  line-height:1.35;
-  color:#f5f0e8;
+  font-family:Oswald;
+  font-size:36px;
+  line-height:1.25;
+  letter-spacing:2px;
+  text-align:center;
+  color:#f4efe6;
+  text-transform:uppercase;
 }
 
 .author{
-  margin-top:14px;
+  margin-top:22px;
   color:#d7aa45;
   font-family:Oswald;
-  letter-spacing:4px;
-  font-size:16px;
+  letter-spacing:6px;
+  font-size:20px;
+  text-align:center;
 }
 
 .role{
-  margin-top:4px;
-  color:#bdbdbd;
-  letter-spacing:1px;
-  font-size:12px;
-}
-
-.take{
-  margin-top:22px;
-  border-top:1px solid rgba(214,165,67,.35);
-  padding-top:14px;
-}
-
-.take h3{
-  color:#d7aa45;
-  font-family:Oswald;
-  letter-spacing:4px;
-  font-size:15px;
-  margin-bottom:8px;
-}
-
-.take p{
-  line-height:1.5;
-  font-size:13px;
-  color:#e7dfd4;
-}
-
-.footer{
-  margin-top:18px;
-  border:1px solid rgba(214,165,67,.3);
-  border-radius:10px;
-  padding:10px;
-  color:#d7aa45;
+  color:#ddd;
   letter-spacing:3px;
-  font-family:Oswald;
   font-size:12px;
   text-align:center;
-}
-
-.side{
-  padding:22px;
-  background:rgba(5,5,5,.55);
-  backdrop-filter:blur(8px);
-}
-
-.date{
-  color:#d7aa45;
-  font-family:Oswald;
-  letter-spacing:3px;
-  font-size:17px;
-}
-
-.day{
-  color:#d7aa45;
-  font-family:"Playfair Display";
-  font-size:21px;
   margin-top:5px;
 }
 
-.side-line{
-  height:1px;
-  background:rgba(214,165,67,.35);
-  margin:16px 0;
+.right{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
-.spot{
-  color:#d7aa45;
-  font-family:Oswald;
-  letter-spacing:2px;
-  font-size:13px;
-  margin-bottom:10px;
-}
-
-.circle{
-  width:86px;
-  height:86px;
-  border:1px solid rgba(214,165,67,.7);
+.photo{
+  width:105px;
+  height:105px;
   border-radius:50%;
-  margin:10px auto;
+  border:1px solid rgba(214,165,67,.7);
+  background:rgba(255,255,255,.06);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:32px;
-  background:rgba(255,255,255,.04);
+  color:#d7aa45;
+  font-family:Oswald;
+  font-size:34px;
+  margin-bottom:14px;
 }
 
 .name{
-  text-align:center;
   color:#d7aa45;
   font-family:Oswald;
-  letter-spacing:2px;
-  font-size:16px;
-}
-
-.bio{
-  margin-top:8px;
+  letter-spacing:3px;
+  font-size:18px;
   text-align:center;
-  color:#ddd;
-  line-height:1.4;
-  font-size:11px;
 }
 
-.past h3{
-  color:#d7aa45;
-  font-family:Oswald;
-  letter-spacing:2px;
-  font-size:13px;
-  margin-bottom:8px;
-}
-
-.past div{
-  color:#ddd;
-  margin-bottom:6px;
+.known{
+  margin:14px 0 10px;
+  color:#eee;
+  letter-spacing:4px;
   font-size:10px;
+}
+
+.movies{
+  width:100%;
+  max-width:240px;
+}
+
+.movie{
+  border-top:1px solid rgba(214,165,67,.25);
+  padding:8px 0;
+  text-align:center;
+}
+
+.movie-title{
+  font-family:Oswald;
+  color:#f2f2f2;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+.year{
+  color:#d7aa45;
+  font-size:12px;
+  margin-top:2px;
 }
 
 @media(max-width:700px){
   .widget{
-    height:430px;
+    height:360px;
     grid-template-columns:1fr;
   }
 
-  .side{
+  .right{
     display:none;
   }
 
-  .main{
+  .left{
     border-right:none;
+    padding:26px;
   }
 
   .quote{
-    font-size:24px;
+    font-size:30px;
   }
 }
 </style>
@@ -216,130 +163,116 @@ h1{
 <body>
 
 <div class="widget">
-  <section class="main">
-    <div class="icon">🎬</div>
-    <h1>DIRECTOR'S CUT</h1>
-    <div class="sub">QUOTE OF THE DAY</div>
-
-    <div class="line"></div>
-
+  <div class="left">
+    <div class="label">🎥 QUOTE OF THE DAY</div>
     <div class="quote" id="quote"></div>
     <div class="author" id="author"></div>
-    <div class="role" id="role"></div>
+    <div class="role">DIRECTOR</div>
+  </div>
 
-    <div class="take">
-      <h3>TODAY'S TAKE</h3>
-      <p id="take"></p>
-    </div>
+  <div class="right">
+    <div class="photo" id="initials"></div>
+    <div class="name" id="name"></div>
+    <div class="known">KNOWN FOR</div>
 
-    <div class="footer">⭐ NOW GO MAKE SOMETHING WORTH REMEMBERING.</div>
-  </section>
-
-  <aside class="side">
-    <div class="date" id="date"></div>
-    <div class="day" id="day"></div>
-
-    <div class="side-line"></div>
-
-    <div class="spot">💡 DIRECTOR SPOTLIGHT</div>
-    <div class="circle" id="initials"></div>
-    <div class="name" id="spotName"></div>
-    <div class="bio" id="bio"></div>
-
-    <div class="side-line"></div>
-
-    <div class="past">
-      <h3>PAST DIRECTORS</h3>
-      <div id="past1"></div>
-      <div id="past2"></div>
-      <div id="past3"></div>
-    </div>
-  </aside>
+    <div class="movies" id="movies"></div>
+  </div>
 </div>
 
 <script>
-const quotes = [
+const directors = [
   {
-    quote:'"The audience is never wrong."',
-    author:"STEVEN SPIELBERG",
-    role:"Legendary Director",
-    bio:"Known for Jurassic Park, E.T., Schindler’s List, and Saving Private Ryan.",
-    take:"Listen. Learn. Observe. Your story matters, but so does your audience."
+    quote:'Cinema is a matter of what is in the frame and what is out.',
+    author:'Martin Scorsese',
+    movies:[
+      ['Goodfellas','1990'],
+      ['The Departed','2006'],
+      ['Taxi Driver','1976'],
+      ['The Irishman','2019']
+    ]
   },
   {
-    quote:'"If it can be written, or thought, it can be filmed."',
-    author:"STANLEY KUBRICK",
-    role:"Visionary Director",
-    bio:"Known for The Shining, 2001: A Space Odyssey, and Full Metal Jacket.",
-    take:"Your imagination is not too big. The work is learning how to bring it to life."
+    quote:'The audience is never wrong.',
+    author:'Steven Spielberg',
+    movies:[
+      ['Jurassic Park','1993'],
+      ['E.T.','1982'],
+      ['Jaws','1975'],
+      ['Saving Private Ryan','1998']
+    ]
   },
   {
-    quote:'"Cinema is a matter of what’s in the frame and what’s out."',
-    author:"MARTIN SCORSESE",
-    role:"Master Filmmaker",
-    bio:"Known for Goodfellas, Taxi Driver, The Departed, and The Irishman.",
-    take:"Focus is power. What you leave out matters as much as what you include."
+    quote:'If it can be written, or thought, it can be filmed.',
+    author:'Stanley Kubrick',
+    movies:[
+      ['The Shining','1980'],
+      ['2001: A Space Odyssey','1968'],
+      ['Full Metal Jacket','1987'],
+      ['A Clockwork Orange','1971']
+    ]
   },
   {
-    quote:'"Don’t dream it. Be it."',
-    author:"AVA DUVERNAY",
-    role:"Director & Producer",
-    bio:"Known for Selma, When They See Us, and Queen Sugar.",
-    take:"Stop waiting to become the person. Start moving like the person today."
+    quote:'The secret to film is that it is an illusion.',
+    author:'George Lucas',
+    movies:[
+      ['Star Wars','1977'],
+      ['American Graffiti','1973'],
+      ['THX 1138','1971'],
+      ['Indiana Jones','1981']
+    ]
   },
   {
-    quote:'"The secret to film is that it’s an illusion."',
-    author:"GEORGE LUCAS",
-    role:"Creator & Director",
-    bio:"Known for Star Wars and building one of cinema’s biggest worlds.",
-    take:"You are building worlds. Details create belief. Belief creates impact."
+    quote:'Make visible what, without you, might perhaps never have been seen.',
+    author:'Robert Bresson',
+    movies:[
+      ['Pickpocket','1959'],
+      ['Au Hasard Balthazar','1966'],
+      ['A Man Escaped','1956'],
+      ['L’Argent','1983']
+    ]
   },
   {
-    quote:'"Make visible what, without you, might perhaps never have been seen."',
-    author:"ROBERT BRESSON",
-    role:"French Film Director",
-    bio:"Known for minimalist and deeply personal filmmaking.",
-    take:"Your eye matters. Your perspective can reveal something nobody else noticed."
+    quote:'The enemy of art is the absence of limitations.',
+    author:'Orson Welles',
+    movies:[
+      ['Citizen Kane','1941'],
+      ['Touch of Evil','1958'],
+      ['The Trial','1962'],
+      ['F for Fake','1973']
+    ]
   },
   {
-    quote:'"The enemy of art is the absence of limitations."',
-    author:"ORSON WELLES",
-    role:"Director & Storyteller",
-    bio:"Known for Citizen Kane and bold visual storytelling.",
-    take:"Don’t wait for perfect conditions. Use what you have and create anyway."
+    quote:'I do not always know what I want, but I do know what I do not want.',
+    author:'Ava DuVernay',
+    movies:[
+      ['Selma','2014'],
+      ['When They See Us','2019'],
+      ['13th','2016'],
+      ['Origin','2023']
+    ]
   }
 ];
 
 const today = new Date();
 const start = new Date(today.getFullYear(),0,0);
 const dayOfYear = Math.floor((today - start) / 86400000);
-const index = dayOfYear % quotes.length;
-const q = quotes[index];
+const index = dayOfYear % directors.length;
+const d = directors[index];
 
-document.getElementById("quote").innerText = q.quote;
-document.getElementById("author").innerText = "— " + q.author;
-document.getElementById("role").innerText = q.role;
-document.getElementById("take").innerText = q.take;
-document.getElementById("spotName").innerText = q.author;
-document.getElementById("bio").innerText = q.bio;
+document.getElementById("quote").innerText = `“${d.quote}”`;
+document.getElementById("author").innerText = d.author.toUpperCase();
+document.getElementById("name").innerText = d.author.toUpperCase();
 
 document.getElementById("initials").innerText =
-  q.author.split(" ").map(w=>w[0]).join("").slice(0,2);
+  d.author.split(" ").map(w=>w[0]).join("").slice(0,2);
 
-document.getElementById("date").innerText =
-  today.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"}).toUpperCase();
-
-document.getElementById("day").innerText =
-  today.toLocaleDateString("en-US",{weekday:"long"});
-
-function pastDirector(num){
-  const pastIndex = (index - num + quotes.length) % quotes.length;
-  return quotes[pastIndex].author;
-}
-
-document.getElementById("past1").innerText = "🎞️ Yesterday — " + pastDirector(1);
-document.getElementById("past2").innerText = "🎞️ 2 Days Ago — " + pastDirector(2);
-document.getElementById("past3").innerText = "🎞️ 3 Days Ago — " + pastDirector(3);
+document.getElementById("movies").innerHTML =
+  d.movies.map(m => `
+    <div class="movie">
+      <div class="movie-title">${m[0]}</div>
+      <div class="year">${m[1]}</div>
+    </div>
+  `).join("");
 </script>
 
 </body>
